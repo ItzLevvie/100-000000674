@@ -59,8 +59,8 @@ chmod +x /usr/local/bin/gh
 
 dockerd --seccomp-profile unconfined --experimental &> /dev/null &
 
-mkdir windows
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.001 --output-document windows/data.7z.001
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document windows/data.7z.002
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document windows/data.7z.003
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document windows/data.7z.004
+mkdir ~/windows
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.001 --output-document ~/windows/data.7z.001
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document ~/windows/data.7z.002
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document ~/windows/data.7z.003
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document ~/windows/data.7z.004
