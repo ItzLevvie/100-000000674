@@ -87,6 +87,8 @@ cp ~/windows/data.img ~/windows/data.img.bak
     echo "      TPM: Y"
     echo "      MTU: 1486"
     echo "      DISPLAY: web"
+    echo "      USER: admin"
+    echo "      PASS: admin"
     echo "      DEBUG: Y"
     echo "    ports:"
     echo "      - 3389:3389/tcp"
