@@ -56,3 +56,5 @@ chmod +x /usr/local/lib/docker/cli-plugins/docker-buildx
 # https://github.com/cli/cli/releases/latest
 wget https://github.com/ItzLevvie/artifacts/releases/latest/download/gh --output-document /usr/local/bin/gh
 chmod +x /usr/local/bin/gh
+
+dockerd --seccomp-profile unconfined --experimental &> /dev/null &
