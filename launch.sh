@@ -86,7 +86,7 @@ cp ~/windows/data.img ~/windows/data.img.bak
     echo "      DISK_SIZE: 128G"
     echo "      TPM: Y"
     echo "      MTU: 1486"
-    echo "      DISPLAY: web"
+    echo "      DISPLAY: disabled"
     echo "      DEBUG: Y"
     echo "    ports:"
     echo "      - 3389:3389/tcp"
