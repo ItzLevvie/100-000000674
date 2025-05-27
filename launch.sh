@@ -82,7 +82,7 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "    image: dockurr/windows:latest"
     echo "    environment:"
     echo "      CPU_CORES: 4"
-    echo "      RAM_SIZE: 10G"
+    echo "      RAM_SIZE: 12G"
     echo "      DISK_SIZE: 128G"
     echo "      TPM: Y"
     echo "      MTU: 1486"
