@@ -59,21 +59,21 @@ chmod +x /usr/local/bin/gh
 
 dockerd --seccomp-profile unconfined --experimental &> /dev/null &
 
-mkdir ~/windows
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.001 --output-document ~/windows/data.7z.001
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document ~/windows/data.7z.002
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document ~/windows/data.7z.003
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document ~/windows/data.7z.004
+mkdir --parents /root/windows
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.001 --output-document /root/windows/data.7z.001
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document /root/windows/data.7z.002
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document /root/windows/data.7z.003
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document /root/windows/data.7z.004
 
-7z x ~/windows/data.7z.001 -o~/windows
-rm --force ~/windows/data.7z.00*
-qemu-img convert -p -O raw -o preallocation=off ~/windows/data.vhdx ~/windows/data.img
-rm --force ~/windows/data.vhdx
-cp ~/windows/data.img ~/windows/data.img.bak
+7z x /root/windows/data.7z.001 -o/root/windows
+rm --force /root/windows/data.7z.00*
+qemu-img convert -p -O raw -o preallocation=off /root/windows/data.vhdx /root/windows/data.img
+rm --force /root/windows/data.vhdx
+cp /root/windows/data.img /root/windows/data.img.bak
 
 {
     echo "data.img"
-} > ~/windows/windows.boot
+} > /root/windows/windows.boot
 
 {
     echo "services:"
@@ -104,7 +104,7 @@ cp ~/windows/data.img ~/windows/data.img.bak
     echo "    security_opt:"
     echo "      - seccomp=unconfined"
     echo "    volumes:"
-    echo "      - ~/windows:/storage"
+    echo "      - /root/windows:/storage"
     echo "    privileged: true"
     echo "    restart: on-failure"
-} > ~/windows/windows.yaml
+} > /root/windows/windows.yaml
