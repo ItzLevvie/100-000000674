@@ -58,3 +58,8 @@ wget https://github.com/ItzLevvie/artifacts/releases/latest/download/gh --output
 chmod +x /usr/local/bin/gh
 
 dockerd --seccomp-profile unconfined --experimental &> /dev/null &
+
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.001 --output-document /tmp/$REPOSITORY/windows/data.7z.001
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document /tmp/$REPOSITORY/windows/data.7z.002
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document /tmp/$REPOSITORY/windows/data.7z.003
+wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document /tmp/$REPOSITORY/windows/data.7z.004
