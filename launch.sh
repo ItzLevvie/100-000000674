@@ -64,3 +64,13 @@ wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.00
 wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document ~/windows/data.7z.002
 wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document ~/windows/data.7z.003
 wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document ~/windows/data.7z.004
+
+7z x ~/windows/data.7z.001 -o~/windows
+rm --force ~/windows/data.7z.00*
+qemu-img convert -p -O raw -o preallocation=off ~/windows/data.vhdx ~/windows/data.img
+rm --force ~/windows/data.vhdx
+cp ~/windows/data.img ~/windows/data.img.bak
+
+{
+    echo "data.img"
+} > ~/windows/windows.boot
