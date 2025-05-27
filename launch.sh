@@ -106,5 +106,5 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "    volumes:"
     echo "      - /root/windows:/storage"
     echo "    privileged: true"
-    echo "    restart: on-failure"
+    echo "    restart: always"
 } > /root/windows/windows.yaml
