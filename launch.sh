@@ -60,10 +60,11 @@ chmod +x /usr/local/bin/gh
 dockerd --seccomp-profile unconfined --experimental &> /dev/null &
 
 mkdir --parents /root/windows
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.001 --output-document /root/windows/data.7z.001
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.002 --output-document /root/windows/data.7z.002
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.003 --output-document /root/windows/data.7z.003
-wget https://github.com/ItzLevvie/artifacts/releases/download/27774-2/data.7z.004 --output-document /root/windows/data.7z.004
+wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.001 --output-document /root/windows/data.7z.001
+wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.002 --output-document /root/windows/data.7z.002
+wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.003 --output-document /root/windows/data.7z.003
+wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.004 --output-document /root/windows/data.7z.004
+wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.005 --output-document /root/windows/data.7z.005
 
 7z x /root/windows/data.7z.001 -o/root/windows
 rm --force /root/windows/data.7z.00*
@@ -84,6 +85,7 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "      CPU_CORES: 4"
     echo "      RAM_SIZE: 12G"
     echo "      DISK_SIZE: 128G"
+    echo "      ARGUMENTS: \"-cpu host,arch_capabilities=off\""
     echo "      TPM: Y"
     echo "      MTU: 1486"
     echo "      DISPLAY: web"
