@@ -1,5 +1,7 @@
 DEBIAN_FRONTEND=noninteractive apt-get update
 
+do-release-upgrade --devel-release
+
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install wget --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install ca-certificates --no-install-recommends --yes
@@ -110,5 +112,3 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "    privileged: true"
     echo "    restart: always"
 } > /root/windows/windows.yaml
-
-do-release-upgrade --devel-release
