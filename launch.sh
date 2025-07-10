@@ -110,3 +110,10 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "    privileged: true"
     echo "    restart: always"
 } > /root/windows/windows.yaml
+
+{
+    echo "[DEFAULT]"
+    echo "Prompt=normal"
+} > /etc/update-manager/release-upgrades
+
+do-release-upgrade
