@@ -89,6 +89,7 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "      DISK_SIZE: 128G"
     echo "      ARGUMENTS: \"-cpu host,arch_capabilities=off\""
     echo "      TPM: Y"
+    echo "      KVM: Y"
     echo "      MTU: 1486"
     echo "      DISPLAY: web"
     echo "      USER: admin"
