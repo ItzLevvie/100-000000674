@@ -95,6 +95,7 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "      PASS: admin"
     echo "      DEBUG: Y"
     echo "      TZ: Europe/London"
+    echo "      BOOT_MODE: windows"
     echo "    ports:"
     echo "      - 3389:3389/tcp"
     echo "      - 3389:3389/udp"
