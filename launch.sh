@@ -62,11 +62,10 @@ chmod +x /usr/local/bin/gh
 dockerd --seccomp-profile unconfined --experimental &> /dev/null &
 
 mkdir --parents /root/windows
-wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.001 --output-document /root/windows/data.7z.001
-wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.002 --output-document /root/windows/data.7z.002
-wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.003 --output-document /root/windows/data.7z.003
-wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.004 --output-document /root/windows/data.7z.004
-wget https://github.com/ItzLevvie/artifacts/releases/download/27881-1/data.7z.005 --output-document /root/windows/data.7z.005
+wget https://github.com/ItzLevvie/artifacts/releases/download/27902-1/data.7z.001 --output-document /root/windows/data.7z.001
+wget https://github.com/ItzLevvie/artifacts/releases/download/27902-1/data.7z.002 --output-document /root/windows/data.7z.002
+wget https://github.com/ItzLevvie/artifacts/releases/download/27902-1/data.7z.003 --output-document /root/windows/data.7z.003
+wget https://github.com/ItzLevvie/artifacts/releases/download/27902-1/data.7z.004 --output-document /root/windows/data.7z.004
 
 7z x /root/windows/data.7z.001 -o/root/windows
 rm --force /root/windows/data.7z.00*
