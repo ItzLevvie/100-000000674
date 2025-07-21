@@ -1,20 +1,5 @@
 DEBIAN_FRONTEND=noninteractive apt-get update
 
-{
-    echo "[DEFAULT]"
-    echo "Prompt=normal"
-} > /etc/update-manager/release-upgrades
-
-do-release-upgrade
-if [ "$(lsb_release --codename | awk '{print $2}')" != "oracular" ]; then
-    reboot
-fi
-do-release-upgrade
-if [ "$(lsb_release --codename | awk '{print $2}')" != "plucky" ]; then
-    reboot
-fi
-do-release-upgrade --devel-release
-
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install wget --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install ca-certificates --no-install-recommends --yes
