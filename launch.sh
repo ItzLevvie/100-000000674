@@ -21,6 +21,9 @@ case "$(lsb_release --codename | awk '{print $2}')" in
         echo "You will be upgraded to Ubuntu 25.10 (questing)."
         do-release-upgrade --devel-release
         ;;
+    *)
+        echo "You are currently on Ubuntu 25.10 (questing) which is the latest release of Ubuntu."
+        ;;
 esac
 
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
