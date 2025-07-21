@@ -6,8 +6,11 @@ DEBIAN_FRONTEND=noninteractive apt-get update
 } > /etc/update-manager/release-upgrades
 
 do-release-upgrade
-reboot
 if [ "$(lsb_release --codename | awk '{print $2}')" != "oracular" ]; then
+    reboot
+fi
+do-release-upgrade
+if [ "$(lsb_release --codename | awk '{print $2}')" != "plucky" ]; then
     reboot
 fi
 do-release-upgrade --devel-release
