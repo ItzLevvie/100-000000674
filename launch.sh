@@ -12,9 +12,9 @@ case "$(lsb_release --codename | awk '{print $2}')" in
         do-release-upgrade
         ;;
     "oracular")
-        do-release-upgrade
         echo "You are currently on Ubuntu 24.10 (oracular)."
         echo "You will be upgraded to Ubuntu 25.04 (plucky)."
+        do-release-upgrade
         ;;
     "plucky")
         echo "You are currently on Ubuntu 25.04 (plucky)."
