@@ -6,6 +6,10 @@ DEBIAN_FRONTEND=noninteractive apt-get update
 } > /etc/update-manager/release-upgrades
 
 do-release-upgrade
+reboot
+if [ "$(lsb_release --codename | awk '{print $2}')" != "oracular" ]; then
+    reboot
+fi
 do-release-upgrade --devel-release
 
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
