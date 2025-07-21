@@ -111,6 +111,7 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "      - seccomp=unconfined"
     echo "    volumes:"
     echo "      - /root/windows:/storage"
+    echo "      - /root:/data"
     echo "    privileged: true"
     echo "    restart: always"
 } > /root/windows/windows.yaml
