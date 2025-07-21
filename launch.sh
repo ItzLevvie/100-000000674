@@ -1,5 +1,28 @@
 DEBIAN_FRONTEND=noninteractive apt-get update
 
+{
+    echo "[DEFAULT]"
+    echo "Prompt=normal"
+} > /etc/update-manager/release-upgrades
+
+case "$(lsb_release --codename | awk '{print $2}')" in
+    "noble")
+        echo "You are currently on Ubuntu 24.04 (noble)."
+        echo "You will be upgraded to Ubuntu 24.10 (oracular)."
+        do-release-upgrade
+        ;;
+    "oracular")
+        do-release-upgrade
+        echo "You are currently on Ubuntu 24.10 (oracular)."
+        echo "You will be upgraded to Ubuntu 25.04 (plucky)."
+        ;;
+    "plucky")
+        do-release-upgrade --devel-release
+        echo "You are currently on Ubuntu 25.04 (plucky)."
+        echo "You will be upgraded to Ubuntu 25.10 (questing)."
+        ;;
+esac
+
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install wget --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install ca-certificates --no-install-recommends --yes
