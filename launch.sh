@@ -1,6 +1,14 @@
 DEBIAN_FRONTEND=noninteractive apt-get update
 
+{
+    echo "[DEFAULT]"
+    echo "Prompt=normal"
+} > /etc/update-manager/release-upgrades
+
+do-release-upgrade
+reboot
 do-release-upgrade --devel-release
+reboot
 
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install wget --no-install-recommends --yes
