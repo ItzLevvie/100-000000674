@@ -1,3 +1,5 @@
+# Run "wget https://raw.githubusercontent.com/ItzLevvie/100-000000674/refs/heads/main/launch.sh && chmod +x launch.sh && ./launch.sh"
+
 DEBIAN_FRONTEND=noninteractive apt-get update
 
 {
