@@ -1,7 +1,5 @@
 # Run "wget https://raw.githubusercontent.com/ItzLevvie/100-000000674/refs/heads/main/launch.sh && chmod +x launch.sh && ./launch.sh"
 
-DEBIAN_FRONTEND=noninteractive apt-get update
-
 {
     echo "[DEFAULT]"
     echo "Prompt=normal"
@@ -28,6 +26,7 @@ case "$(lsb_release --codename | awk '{print $2}')" in
         ;;
 esac
 
+DEBIAN_FRONTEND=noninteractive apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install sudo --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install wget --no-install-recommends --yes
 DEBIAN_FRONTEND=noninteractive apt-get install ca-certificates --no-install-recommends --yes
