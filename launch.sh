@@ -110,7 +110,7 @@ cp /root/windows/data.img /root/windows/data.img.bak
     echo "    image: dockurr/windows:latest"
     echo "    environment:"
     echo "      CPU_CORES: 4"
-    echo "      RAM_SIZE: 12G"
+    echo "      RAM_SIZE: 13G"
     echo "      DISK_SIZE: 128G"
     echo "      ARGUMENTS: \"-cpu host,arch_capabilities=off\""
     echo "      TPM: Y"
